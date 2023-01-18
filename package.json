@@ -1,6 +1,6 @@
 {
   "name": "deepsearchjs",
-  "version": "0.0.1-alhpa.03",
+  "version": "0.0.1-alhpa.05",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "git@github.com:wise-introvert/search-object.git",
