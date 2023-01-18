@@ -153,3 +153,10 @@ console.log(searchResults);
   'c.e[3].h.i4.j.k[0].n.o[0].p': 'p4'
 }
 ```
+
+
+### TODO
+- [ ] ci/cd: Automate versioning and releases
+- [ ] feat: Optimize search algorithm to handle oversized datasets
+- [ ] feat: Add a third parameter to the function to customize the search parameters ( leaf-node results only, etc... )
+- [ ] feat: Search across values??
