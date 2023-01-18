@@ -1,5 +1,9 @@
 {
   "name": "deepsearchjs",
+    "version": "0.0.1-alhpa.02",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": "git@github.com:wise-introvert/search-object.git",
   "dependencies": {
     "lodash": "^4.17.21"
   },
