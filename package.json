@@ -3,6 +3,7 @@
   "version": "0.0.1-alhpa.06",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": ["src", "dist"],
   "repository": "git@github.com:wise-introvert/search-object.git",
   "dependencies": {
     "lodash": "^4.17.21"
