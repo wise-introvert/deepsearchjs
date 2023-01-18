@@ -1,5 +1,5 @@
 {
-  "name": "media-extractor",
+  "name": "deepsearchjs",
   "dependencies": {
     "lodash": "^4.17.21"
   },
