@@ -39,9 +39,14 @@ export const search = <T = any>(obj: T, query: string): any => {
     return regex.test(field);
   });
 
-  const searchValues: any[] = searchKeys.map((key: string): any => {
-    return get(obj, key);
-  });
+  const searchValues: Record<string, any> = searchKeys.reduce(
+    (acc: Record<string, any>, key: string): any => {
+      acc[key] = get(obj, key);
 
-  return searchValues.filter((value: any): boolean => !isEmpty(value));
+      return acc;
+    },
+    {}
+  );
+
+  return searchValues;
 };
