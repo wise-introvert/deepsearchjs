@@ -22,7 +22,8 @@
   },
   "scripts": {
     "watch": "nodemon",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "build": "tsc -p tsconfig-build.json"
   },
   "jest": {
     "testPathIgnorePatterns": [
