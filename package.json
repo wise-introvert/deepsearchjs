@@ -1,6 +1,6 @@
 {
   "name": "deepsearchjs",
-  "version": "0.0.1-alhpa.07",
+  "version": "0.0.1-alhpa.08",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["src", "dist"],
