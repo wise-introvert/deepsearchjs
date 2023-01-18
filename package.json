@@ -1,6 +1,7 @@
 {
   "name": "deepsearchjs",
   "version": "0.0.1",
+  "license": "mit", 
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["src", "dist"],
