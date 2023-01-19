@@ -1,6 +1,6 @@
 import { describe, it, expect } from "@jest/globals";
 
-import { search } from "../src";
+import { search, isObject, isArray, getKeys } from "../src";
 
 type Control = Record<string, any>;
 
