@@ -1,6 +1,6 @@
 import { describe, it, expect } from "@jest/globals";
 
-import { search } from "../src";
+import { search, isObject, isArray, getKeys } from "../src";
 
 type Control = Record<string, any>;
 
@@ -34,24 +34,61 @@ const control: Control = {
   },
 };
 
+describe("isObject", () => {
+  test("returns true for an object", () => {
+    expect(isObject({})).toBe(true);
+  });
+
+  test("returns false for a string", () => {
+    expect(isObject("test")).toBe(false);
+  });
+
+  test("returns false for a number", () => {
+    expect(isObject(1)).toBe(false);
+  });
+});
+
+describe("isArray", () => {
+  test("returns true for an array", () => {
+    expect(isArray([])).toBe(true);
+  });
+
+  test("returns false for an object", () => {
+    expect(isArray({})).toBe(false);
+  });
+
+  test("returns false for a string", () => {
+    expect(isArray("test")).toBe(false);
+  });
+});
+
 describe("search", () => {
-  it("returns an empty array when 0 results found", () => {
-    const searchResults: string[] = search<Control>(control, "invalid");
-
-    expect(searchResults).toHaveLength(0);
+  test("returns an object containing the search results", () => {
+    const obj = {
+      a: {
+        b: {
+          c: "value1"
+        },
+        d: "value2"
+      },
+      e: "value3"
+    };
+    const query = "c";
+    const result = search(obj, query);
+    expect(result).toEqual({ "a.b.c": "value1" });
   });
-
-  it("returns an array of string when more than 0 results found", () => {
-    const searchResults: string[] = search<Control>(control, "f");
-
-    expect(searchResults.length).toBeGreaterThan(0);
-    expect(searchResults).toEqual(expect.arrayContaining([expect.any(String)]));
-  });
-
-  it("returns paths that are valid", () => {
-    const searchResults: string[] = search<Control>(control, "e");
-
-    expect(searchResults.length).toBe(1);
-    expect(searchResults[0]).toEqual(control.c.e);
+  test("returns an empty object if search query not found", () => {
+    const obj = {
+      a: {
+        b: {
+          c: "value1"
+        },
+        d: "value2"
+      },
+      e: "value3"
+    };
+    const query = "x";
+    const result = search(obj, query);
+    expect(result).toEqual({});
   });
 });
