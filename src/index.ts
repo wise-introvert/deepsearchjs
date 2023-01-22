@@ -1,16 +1,16 @@
 /**
- * This code exports three functions: 
+ * This code exports three functions:
  * 1. isObject
  * 2. isArray
  * 3. search
- * 
- * isObject takes any value and returns a 
- * boolean indicating whether it is an object. 
- * 
- * isArray takes any value and returns a 
- * boolean indicating whether it is an array. 
- * 
- * search takes an object and a query string and 
+ *
+ * isObject takes any value and returns a
+ * boolean indicating whether it is an object.
+ *
+ * isArray takes any value and returns a
+ * boolean indicating whether it is an array.
+ *
+ * search takes an object and a query string and
  * returns an object containing the search results. getkeys is a helper function
  */
 
@@ -21,7 +21,7 @@ import { get, isEmpty } from "lodash";
  * @param x - value to check
  * @returns - boolean indicating whether the provided value is an object
  */
-export const isObject = (x: any): boolean => {
+const isObject = (x: any): boolean => {
   return Object.prototype.toString.call(x) === "[object Object]";
 };
 
@@ -30,7 +30,7 @@ export const isObject = (x: any): boolean => {
  * @param x - value to check
  * @returns - boolean indicating whether the provided value is an array
  */
-export const isArray = (x: any): boolean => Array.isArray(x);
+const isArray = (x: any): boolean => Array.isArray(x);
 
 /**
  * Get all the keys of an object and its nested objects/arrays
