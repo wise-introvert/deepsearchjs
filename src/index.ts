@@ -72,8 +72,8 @@ export const getkeys = (obj: any, prefix?: any): any => {
 export const search = <T = any>(obj: T, query: string): any => {
   const keys: string[] = getkeys(obj);
 
+  const regex: RegExp = new RegExp(`\\.${query}$`, "gi");
   const searchKeys: string[] = keys.filter((field: string): boolean => {
-    const regex: RegExp = new RegExp(`\\.${query}$`, "gi");
     return regex.test(field);
   });
 
