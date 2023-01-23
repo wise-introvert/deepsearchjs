@@ -45,31 +45,30 @@ const isArray = (x: any): boolean => Array.isArray(x);
  * Get all the keys of an object and its nested objects/arrays
  * @param obj - object to get the keys from
  * @param prefix - prefix to add to the keys, defaults to empty string
+ * @param results - array of keys, defaults to empty
+ *                    array ( mainly for recursion)
  * @returns - array of keys
  */
-export const getkeys = (obj: any, prefix?: any): any => {
-  try {
-    const keys: string[] = Object.keys(obj);
-    prefix = prefix ? prefix + "." : "";
-    return keys.reduce((result: string[], key: string): string[] => {
-      if (isObject(obj[key])) {
-        result.push(prefix + key);
-        result = result.concat(getkeys(obj[key], (prefix + key).trim()));
-      } else if (isArray(obj[key])) {
-        result.push(prefix + key);
-        obj[key].forEach((item: any, index: number): void => {
-          result = result.concat(
-            getkeys(item, (prefix + key + `[${index}]`).trim())
-          );
-        });
-      } else {
-        result.push((prefix + key).trim());
-      }
-      return result;
-    }, []);
-  } catch (error) {
-    return;
-  }
+export const getkeys = (
+  obj: any,
+  prefix: string = "",
+  results: string[] = []
+): any => {
+  Object.keys(obj).forEach((key) => {
+    const newPrefix: string = `${prefix}${prefix ? "." : ""}${key}`;
+    if (isObject(obj[key])) {
+      results.push(newPrefix);
+      getkeys(obj[key], newPrefix, results);
+    } else if (isArray(obj[key])) {
+      results.push(newPrefix);
+      obj[key].forEach((item: string, index: number): void => {
+        getkeys(item, `${newPrefix}[${index}]`, results);
+      });
+    } else {
+      results.push(newPrefix);
+    }
+  });
+  return results;
 };
 
 /**
