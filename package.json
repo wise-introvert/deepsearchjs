@@ -4,10 +4,7 @@
   "license": "mit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "src",
-    "dist"
-  ],
+  "files": ["src", "dist"],
   "repository": "git@github.com:wise-introvert/deepsearchjs.git",
   "dependencies": {
     "lodash": "^4.17.21"
@@ -29,7 +26,8 @@
     "test": "jest",
     "watch": "nodemon",
     "test:watch": "jest --watch",
-    "build": "tsc -p tsconfig-build.json"
+    "build": "tsc -p tsconfig-build.json",
+    "dev": "nodemon --config nodemon.dev.json"
   },
   "jest": {
     "testPathIgnorePatterns": [

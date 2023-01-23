@@ -1,3 +1,5 @@
+nodemon.dev.json
+src/testing.ts
 # Logs
 logs
 *.log
