@@ -36,292 +36,157 @@ search<T>(object: T, any> | Array<any>, searchTerm: string): P;
 <details>
   <summary>sample data</summary>
   <pre>
-  {
-    users: [
-      {
-        id: 1,
-        name: "John Smith",
-        email: "john.smith@example.com",
-        address: {
-          street: "123 Main St",
-          city: "Anytown",
-          state: "NY",
-          zip: "12345",
-          phoneNumbers: [
-            {
-              type: "home",
-              number: "555-555-5555",
-            },
-            {
-              type: "work",
-              number: "555-555-5556",
-            },
-          ],
-          previousAddresses: [
-            {
-              street: "456 Elm St",
-              city: "Anytown",
-              state: "NY",
-              zip: "54321",
-              yearsLived: 3,
-              phoneNumbers: [
-                {
-                  type: "home",
-                  number: "555-555-5557",
-                },
-                {
-                  type: "work",
-                  number: "555-555-5558",
-                },
-              ],
-              previousAddresses: [
-                {
-                  street: "111 Pine St",
-                  city: "Anytown",
-                  state: "NY",
-                  zip: "11111",
-                  yearsLived: 1,
-                },
-                {
-                  street: "222 Cedar St",
-                  city: "Anytown",
-                  state: "NY",
-                  zip: "22222",
-                  yearsLived: 2,
-                },
-              ],
-            },
-            {
-              street: "789 Oak St",
-              city: "Anytown",
-              state: "NY",
-              zip: "67890",
-              yearsLived: 5,
-              "phoneNumbers ": [
-                {
-                  type: "home",
-                  number: "555-555-5559",
-                },
-                {
-                  type: "work",
-                  number: "555-555-5560",
-                },
-              ],
-              previousAddresses: [
-                {
-                  street: "333 Maple St",
-                  city: "Anytown",
-                  state: "NY",
-                  zip: "33333",
-                  yearsLived: 3,
-                },
-                {
-                  street: "444 Birch St",
-                  city: "Anytown",
-                  state: "NY",
-                  zip: "44444",
-                  yearsLived: 4,
-                },
-              ],
-            },
-          ],
-        },
-        orders: [
-          {
-            id: 101,
-            date: "2022-01-01",
-            total: 123,
-            items: [
-              {
-                name: "item 1",
-                quantity: 2,
-                ders: 50,
-              },
-              {
-                name: "item 2",
-                quantity: 1,
-                ders: 40,
-              },
-            ],
-            shippingAddress: {
-              street: "123 Main St",
-              city: "Anytown",
-              state: "NY",
-              zip: "12345",
-            },
-          },
-          {
-            id: 102,
-            date: "2022-02-01",
-            total: 200,
-            items: [
-              {
-                name: "item 3",
-                quantity: 3,
-                ders: 30,
-              },
-              {
-                name: "item 4",
-                quantity: 2,
-                ders: 25,
-              },
-            ],
-            shippingAddress: {
-              street: "456 Elm St",
-              city: "Anytown",
-              state: "NY",
-              zip: "54321",
-            },
-          },
+{
+  "users": [
+    {
+      "id": 39101,
+      "name": "Edwin Reichel",
+      "email": "Kirk.Bednar@yahoo.com",
+      "address": {
+        "street": "1709 Carole Branch",
+        "city": "Jenkinsboro",
+        "state": "TX",
+        "zip": "61317-0976",
+        "phoneNumbers": [
+          { "type": "work", "number": "232.844.3064 x29733" },
+          { "type": "work", "number": "950.846.8118 x9126" }
         ],
+        "previousAddresses": [
+          {
+            "street": "82002 Connelly Dale",
+            "city": "Folsom",
+            "state": "MS",
+            "zip": "20367-6986",
+            "yearsLived": 10,
+            "phoneNumbers": [{ "type": "work", "number": "1-997-352-5842" }],
+            "previousAddresses": [
+              {
+                "street": "663 Emie Way",
+                "city": "Gradyton",
+                "state": "OH",
+                "zip": "09828-8254",
+                "yearsLived": 5
+              },
+              {
+                "street": "1991 Consuelo Roads",
+                "city": "Gusbury",
+                "state": "KY",
+                "zip": "69719",
+                "yearsLived": 1
+              }
+            ]
+          }
+        ]
       },
-      {
-        id: 2,
-        name: "Jane Doe",
-        email: "jane.doe@example.com",
-        address: {
-          street: "987 Park Ave",
-          city: "Anytown",
-          state: "NY",
-          zip: "98765",
-          phoneNumbers: [
+      "orders": [
+        {
+          "id": 15686,
+          "date": "Sun Jan 22 2023 15:36:15 GMT-0500 (Eastern Standard Time)",
+          "total": 83285,
+          "items": [
             {
-              type: "home",
-              number: "555-555-5561",
+              "name": "Incredible Metal Shoes",
+              "quantity": 1,
+              "price": "469.00"
             },
             {
-              type: "work",
-              number: "555-555-5562",
+              "name": "Unbranded Concrete Chair",
+              "quantity": 6,
+              "price": "999.00"
             },
+            {
+              "name": "Licensed Concrete Sausages",
+              "quantity": 9,
+              "price": "657.00"
+            },
+            {
+              "name": "Electronic Rubber Ball",
+              "quantity": 7,
+              "price": "117.00"
+            }
           ],
-          previousAddresses: [
-            {
-              street: "654 Elm St",
-              city: "Anytown",
-              state: "NY",
-              zip: "65432",
-              yearsLived: 4,
-            },
-            {
-              street: "321 Oak St",
-              city: "Anytown",
-              state: "NY",
-              zip: "32109",
-              yearsLived: 2,
-              phoneNumbers: [
-                {
-                  type: "home",
-                  number: "555-555-5563",
-                },
-                {
-                  type: "work",
-                  number: "555-555-5564",
-                },
-              ],
-              previousAddresses: [
-                {
-                  street: "321 Pine St",
-                  city: "Anytown",
-                  state: "NY",
-                  zip: "11111",
-                  yearsLived: 1,
-                },
-                {
-                  street: "432 Cedar St",
-                  city: "Anytown",
-                  state: "NY",
-                  zip: "22222",
-                  yearsLived: 2,
-                },
-              ],
-            },
-            {
-              street: "765 Oak St",
-              city: "Anytown",
-              state: "NY",
-              zip: "67890",
-              yearsLived: 5,
-              phoneNumbers: [
-                {
-                  type: "home",
-                  number: "555-555-5565",
-                },
-                {
-                  type: "work",
-                  number: "555-555-5566",
-                },
-              ],
-              previousAddresses: [
-                {
-                  street: "876 Maple St",
-                  city: "Anytown",
-                  state: "NY",
-                  zip: "33333",
-                  yearsLived: 3,
-                },
-                {
-                  street: "987 Birch St",
-                  city: "Anytown",
-                  state: "NY",
-                  zip: "44444",
-                  yearsLived: 4,
-                },
-              ],
-            },
-          ],
-        },
-        orders: [
-          {
-            id: 101,
-            date: "2022-01-01",
-            total: 123,
-            items: [
-              {
-                name: "item 1",
-                quantity: 2,
-                ders: 50,
-              },
-              {
-                name: "item 2",
-                quantity: 1,
-                ders: 40,
-              },
-            ],
-            shippingAddress: {
-              street: "123 Main St",
-              city: "Anytown",
-              state: "NY",
-              zip: "12345",
-            },
-          },
-          {
-            id: 102,
-            date: "2022-02-01",
-            total: 200,
-            items: [
-              {
-                name: "item 3",
-                quantity: 3,
-                ders: 30,
-              },
-              {
-                name: "item 4",
-                quantity: 2,
-                ders: 25,
-              },
-            ],
-            shippingAddress: {
-              street: "456 Elm St",
-              city: "Anytown",
-              state: "NY",
-              zip: "54321",
-            },
-          },
+          "shippingAddress": {
+            "street": "034 Wiza Forge",
+            "city": "Glenniemouth",
+            "state": "VT",
+            "zip": "60082-4617"
+          }
+        }
+      ]
+    },
+    {
+      "id": 41973,
+      "name": "Melanie Upton",
+      "email": "Alisha.Boyle@yahoo.com",
+      "address": {
+        "street": "69147 Bode Junctions",
+        "city": "Bakersfield",
+        "state": "WA",
+        "zip": "83859",
+        "phoneNumbers": [
+          { "type": "home", "number": "(263) 786-2737 x719" },
+          { "type": "home", "number": "1-536-445-2960" }
         ],
+        "previousAddresses": [
+          {
+            "street": "99456 Elliott Corner",
+            "city": "Joanneburgh",
+            "state": "ME",
+            "zip": "41321",
+            "yearsLived": 9,
+            "phoneNumbers": [
+              { "type": "work", "number": "(999) 243-1101" },
+              { "type": "work", "number": "353.548.4339 x89335" }
+            ],
+            "previousAddresses": [
+              {
+                "street": "591 Thomas Way",
+                "city": "New Richmond",
+                "state": "OH",
+                "zip": "19873",
+                "yearsLived": 3
+              },
+              {
+                "street": "215 Shanahan Crescent",
+                "city": "South Clarissa",
+                "state": "MS",
+                "zip": "31746",
+                "yearsLived": 2
+              }
+            ]
+          }
+        ]
       },
-    ],
-  };
-  </pre>
+      "orders": [
+        {
+          "id": 21059,
+          "date": "Sun Jan 22 2023 11:09:50 GMT-0500 (Eastern Standard Time)",
+          "total": 38281,
+          "items": [
+            { "name": "Rustic Frozen Shirt", "quantity": 3, "price": "797.00" },
+            {
+              "name": "Luxurious Fresh Salad",
+              "quantity": 3,
+              "price": "290.00"
+            },
+            {
+              "name": "Ergonomic Bronze Pizza",
+              "quantity": 10,
+              "price": "380.00"
+            }
+          ],
+          "shippingAddress": {
+            "street": "35692 Miller Locks",
+            "city": "Bowie",
+            "state": "TN",
+            "zip": "40565-6785"
+          }
+        }
+      ]
+    }
+  ]
+}
+</pre>
 </details>
 
 #### **`index.ts`**
@@ -341,11 +206,11 @@ search(data, /city/gi);
 
 /*
  * All three calls will have the same output:
- *  {
- *    "users[0].address.city": "Anytown",
- *    "users[0].address.previousAddresses[0].city": "Anytown",
- *    ...
- *  }
+ * {
+ *   "users[0].address.city": "Jenkinsboro",
+ *   "users[0].address.previousAddresses[0].city": "Folsom",
+ *   ...
+ * }
  */
 ```
 
