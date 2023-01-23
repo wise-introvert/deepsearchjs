@@ -71,11 +71,12 @@ export const getkeys = (obj: any, prefix?: any): any => {
  */
 export const search = <T = any>(
   obj: T,
-  query: string | ((key: string, value: any) => boolean)
+  query: string | ((key: string, value: any) => boolean) | RegExp
 ): any => {
   const keys: string[] = getkeys(obj);
 
-  const regex: RegExp = new RegExp(`\\.${query}$`, "gi");
+  const regex: RegExp =
+    query instanceof RegExp ? query : new RegExp(`\\.${query}$`, "gi");
   const searchKeys: string[] = keys.filter((field: string): boolean => {
     if (typeof query === "function") {
       return query(field, get(obj, field));
