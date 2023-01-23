@@ -69,11 +69,17 @@ export const getkeys = (obj: any, prefix?: any): any => {
  * @param query - string to search for
  * @returns - object containing the search results
  */
-export const search = <T = any>(obj: T, query: string): any => {
+export const search = <T = any>(
+  obj: T,
+  query: string | ((key: string, value: any) => boolean)
+): any => {
   const keys: string[] = getkeys(obj);
 
   const regex: RegExp = new RegExp(`\\.${query}$`, "gi");
   const searchKeys: string[] = keys.filter((field: string): boolean => {
+    if (typeof query === "function") {
+      return query(field, get(obj, field));
+    }
     return regex.test(field);
   });
 
