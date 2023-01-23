@@ -1,5 +1,8 @@
 ## deepsearchjs
 
+[![build](https://github.com/wise-introvert/deepsearchjs/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/wise-introvert/deepsearchjs/workflows/npm-publish.yml)
+[![test](https://github.com/wise-introvert/deepsearchjs/actions/workflows/test.yml/badge.svg)](https://github.com/wise-introvert/deepsearchjs/workflows/test.yml)
+
 Search for key in deeply-nested objects.
 
 ### Installation
@@ -154,8 +157,8 @@ console.log(searchResults);
 }
 ```
 
-
 ### TODO
+
 - [ ] ci/cd: Automate versioning and releases
 - [ ] feat: Optimize search algorithm to handle oversized datasets
 - [ ] feat: Add a third parameter to the function to customize the search parameters ( leaf-node results only, etc... )
