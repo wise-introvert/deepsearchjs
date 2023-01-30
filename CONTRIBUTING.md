@@ -1,38 +1,65 @@
-# Contributing to deepsearchjs
+# deepsearchjs Contribution Guide
 
-We welcome contributions to deepsearchjs! Here are some guidelines to help you get started.
+Welcome to the `deepsearchjs` contribution guide. `deepsearchjs` is a TypeScript library that allows for searching deeply-nested objects.
+
+## Getting Started
+
+To get started contributing to `deepsearchjs`, you'll need to do the following:
+
+1. Clone the repository: `git clone https://github.com/wise-introvert/deepsearchjs.git`
+2. Install dependencies: `yarninstall`
+3. Build the library: `yarn build`
+4. Run the tests: `yarn test`
+
+Make sure that all tests pass before creating a pull request.
 
 ## Code of Conduct
 
-Please be sure to read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+We expect all contributors to follow our code of conduct. This project adheres to the [Contributor Covenant](https://www.contributor-covenant.org/). By participating, you are expected to uphold this code.
 
-## Bug Reports and Feature Requests
+## Issues and Bugs
 
-If you encounter any bugs or have any feature requests, please open an issue on our [issue tracker](https://github.com/[username]/deepsearchjs/issues).
+If you find an issue or a bug, please submit it in the [Issues](https://github.com/wise-introvert/deepsearchjs/issues) section of the repository. When submitting an issue, please include the following information:
 
-## Development
+- A clear and concise description of the problem
+- Steps to reproduce the issue
+- Expected behavior
+- Actual behavior
+- Screenshots or GIFs, if applicable
+- Additional context or information
 
-### Setting up the environment
+## Feature Requests
 
-- Clone the repository
-- Install the dependencies using yarn or npm
-- run the command `npm start` to start development environment
+We welcome feature requests. To submit a feature request, please open an issue in the [Issues](https://github.com/wise-introvert/deepsearchjs/issues) section of the repository and include the following information:
 
-### Code Style
+- A clear and concise description of the feature
+- Use cases for the feature
+- Additional context or information
 
-Please follow the [airbnb javascript style guide](https://github.com/airbnb/javascript)
+## Pull Requests
 
-### Testing
-
-Please make sure to write test cases for any new feature or bug fix.
-
-### Submitting a Pull Request
+We welcome pull requests. Before submitting a pull request, please make sure to do the following:
 
 1. Fork the repository
 2. Create a new branch for your changes
-3. Commit your changes
-4. Push to your fork and submit a pull request to the `master` branch
+3. Make your changes
+4. Run the tests and make sure they pass
+5. Update the documentation, if necessary
+6. Submit the pull request to the `master` branch
 
-We'll review your changes and merge them if they look good.
+Please be aware that your pull request will be reviewed and may be commented on or requested changes before being accepted.
 
-Thanks for contributing!
+## Code Style and Conventions
+
+We follow the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) for this project. Please make sure your code adheres to the same style guide before submitting a pull request.
+
+## Acknowledgements
+
+- [lodash](https://lodash.com/) for providing utility functions
+- [jest](https://jestjs.io/) for providing testing framework
+- Coffee :coffee::sleepy:
+
+## Contact
+
+If you have any questions or concerns, please reach out to the maintainers of this project:
+- [Fardeen Panjwani (wise-introvert)](https://github.com/wise-introvert)
