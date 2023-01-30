@@ -1,18 +1,15 @@
-name: Generate CHANGELOG
+name: Changelog
 
 on:
-  push:
-    tags:
-    - "v[0-9]+.[0-9]+.[0-9]+"
+  release:
+    types:
+      - created
 
 jobs:
-  generate_changelog:
+  changelog:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Release
-      uses: docker://antonyurchenko/git-release:latest
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        args: build/*.zip
+      - name: "✏️ Generate release changelog"
+        uses: heinrichreimer/github-changelog-generator-action@v2.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} 
