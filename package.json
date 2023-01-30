@@ -4,14 +4,34 @@
   "license": "mit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "src",
-    "dist"
-  ],
+  "files": ["src", "dist"],
   "repository": "git@github.com:wise-introvert/deepsearchjs.git",
   "dependencies": {
     "lodash": "^4.17.21"
   },
+  "keywords": [
+    "typescript",
+    "library",
+    "json",
+    "object",
+    "search",
+    "nested",
+    "deep",
+    "keys",
+    "keywords",
+    "utility",
+    "functionality",
+    "api",
+    "searching",
+    "optimization",
+    "recursion",
+    "traversal",
+    "algorithm",
+    "performance",
+    "result",
+    "deeply-nested",
+    "query"
+  ],
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
