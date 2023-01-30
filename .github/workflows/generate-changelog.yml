@@ -1,26 +1,18 @@
 name: Generate CHANGELOG
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+    - "v[0-9]+.[0-9]+.[0-9]+"
 
 jobs:
   generate_changelog:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    
-    - name: Generate CHANGELOG
-      uses: actions/create-release-notes-action@v2
+    - name: Release
+      uses: docker://antonyurchenko/git-release:latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        release-notes-file: CHANGELOG.md
-        release-notes-header: "## Changelog"
-    
-    - name: Commit CHANGELOG
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: "docs: generate changelog for ${{ env.GITHUB_REF }}"
-        push: true
-
+        args: build/*.zip
