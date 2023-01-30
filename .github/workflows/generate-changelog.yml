@@ -1,0 +1,26 @@
+name: Generate CHANGELOG
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  generate_changelog:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Generate CHANGELOG
+      uses: actions/create-release-notes-action@v2
+      with:
+        release-notes-file: CHANGELOG.md
+        release-notes-header: "## Changelog"
+    
+    - name: Commit CHANGELOG
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "docs: generate changelog for ${{ env.GITHUB_REF }}"
+        push: true
+
