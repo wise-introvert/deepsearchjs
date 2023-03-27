@@ -4,11 +4,8 @@
   "license": "mit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://project-arda.gitbook.io/deepsearchjs",
-  "files": [
-    "src",
-    "dist"
-  ],
+  "homepage": "https://project-arda.gitbook.io/deepsearchjs/readme",
+  "files": ["src", "dist"],
   "repository": "git@github.com:wise-introvert/deepsearchjs.git",
   "dependencies": {
     "lodash": "^4.17.21"
