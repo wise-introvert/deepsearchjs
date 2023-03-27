@@ -5,9 +5,13 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://project-arda.gitbook.io/deepsearchjs",
-  "files": ["src", "dist"],
+  "files": [
+    "src",
+    "dist"
+  ],
   "repository": "git@github.com:wise-introvert/deepsearchjs.git",
   "dependencies": {
+    "benchmark": "^2.1.4",
     "lodash": "^4.17.21"
   },
   "keywords": [
@@ -38,6 +42,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.18.6",
     "@jest/globals": "^29.3.1",
+    "@types/benchmark": "^2.1.2",
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.11.18",
     "babel-jest": "^29.3.1",
