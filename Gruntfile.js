@@ -24,11 +24,33 @@ module.exports = function (grunt) {
         },
       },
     },
+    bump: {
+      options: {
+        files: ["package.json"],
+        commit: true,
+        commitMessage: "build: update build version to %VERSION%",
+        commitFiles: ["-a"],
+        createTag: true,
+        tagName: "%VERSION%",
+        tagMessage: "v%VERSION%",
+        push: false,
+        gitDescribeOptions: "--tags --always --abbrev=1 --dirty=-d",
+        globalReplace: false,
+        prereleaseName: false,
+        metadata: "",
+        regExp: false,
+      },
+    },
   });
 
   grunt.loadNpmTasks("grunt-ts");
   grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.loadNpmTasks("grunt-bump");
+  grunt.loadNpmTasks("grunt-git");
 
+  grunt.registerTask("release", "bump:patch");
+  grunt.registerTask("release:minor", "bump:minor");
+  grunt.registerTask("release:major", "bump:major");
   // Default tasks.
   grunt.registerTask("default", ["ts:build", "uglify"]);
 };

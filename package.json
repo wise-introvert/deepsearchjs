@@ -1,6 +1,6 @@
 {
   "name": "deepsearchjs",
-  "version": "1.6.0",
+  "version": "1.7.2",
   "license": "mit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -47,7 +47,9 @@
     "babel-jest": "^29.3.1",
     "benchmark": "^2.1.4",
     "grunt": "^1.6.1",
+    "grunt-bump": "^0.8.0",
     "grunt-contrib-uglify": "^5.2.2",
+    "grunt-git": "^1.1.1",
     "grunt-ts": "^6.0.0-beta.22",
     "jest": "^29.3.1",
     "nodemon": "^2.0.20",
@@ -60,7 +62,7 @@
     "watch": "nodemon",
     "benchmark": "sed -i '/Benchmark/,$d' README.md && ts-node src/benchmark.ts >> README.md",
     "test:watch": "jest --watch",
-    "build": "yarn rimraf dist && yarn benchmark && tsc -p tsconfig-build.json",
+    "build": "yarn rimraf dist && yarn benchmark && grunt",
     "dev": "nodemon --config nodemon.dev.json"
   },
   "jest": {

@@ -2224,6 +2224,14 @@ flagged-respawn@^1.0.1:
   resolved "https://registry.yarnpkg.com/flagged-respawn/-/flagged-respawn-1.0.1.tgz#e7de6f1279ddd9ca9aac8a5971d618606b3aab41"
   integrity sha512-lNaHNVymajmk0OJMBn8fVUAU1BtDeKIqKoVhk4xAALB57aALg6b4W0MfJ/cUE0g9YBXy5XhSlPIpYIJ7HaY/3Q==
 
+flopmang@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/flopmang/-/flopmang-1.0.0.tgz#22c82f12b537d5d440d5f0ad87ac39109ff31e26"
+  integrity sha512-WQsI7/o5g8NC/VCKbAJQcxSm77k1hd5beC0qikWOvz9iDqwKiwB0xfSGIgAOpHck00enCiJKUrzsGN775FQzdw==
+  dependencies:
+    underscore "^1.9.1"
+    underscore.string "^3.3.5"
+
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -2380,6 +2388,13 @@ graceful-fs@^4.2.9:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.10.tgz#147d3a006da4ca3ce14728c7aefc287c367d7a6c"
   integrity sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==
 
+grunt-bump@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/grunt-bump/-/grunt-bump-0.8.0.tgz#d3ffe0cf3cf0b38e09607b78538f42a531eafe55"
+  integrity sha512-xih0/NBbmIk6LdVspC/yO2E1ITaghfv8aCmY2S6VQ9rxFpZ8skAL4IMwwESlQZIRES+eK6lQOKgpeFBPV5amRA==
+  dependencies:
+    semver "^5.1.0"
+
 grunt-cli@~1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/grunt-cli/-/grunt-cli-1.4.3.tgz#22c9f1a3d2780bf9b0d206e832e40f8f499175ff"
@@ -2400,6 +2415,13 @@ grunt-contrib-uglify@^5.2.2:
     maxmin "^3.0.0"
     uglify-js "^3.16.1"
     uri-path "^1.0.0"
+
+grunt-git@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/grunt-git/-/grunt-git-1.1.1.tgz#50c315e6647ec77c841c387f6ad050a49a415f10"
+  integrity sha512-PiqCEuh3K9H+BheQozaQ8LCoO1hjS6MzQuany4IpIY4A/d/U9omQdpI70asf+bWeCU3eQTI2wEk8vqeG5Ktzvg==
+  dependencies:
+    flopmang "^1.0.0"
 
 grunt-known-options@~2.0.0:
   version "2.0.0"
@@ -4007,7 +4029,7 @@ sax@>=0.6.0:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-semver@^5.3.0, semver@^5.4.1, semver@^5.7.1:
+semver@^5.1.0, semver@^5.3.0, semver@^5.4.1, semver@^5.7.1:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
@@ -4355,13 +4377,18 @@ undefsafe@^2.0.5:
   resolved "https://registry.yarnpkg.com/undefsafe/-/undefsafe-2.0.5.tgz#38733b9327bdcd226db889fb723a6efd162e6e2c"
   integrity sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==
 
-underscore.string@~3.3.5:
+underscore.string@^3.3.5, underscore.string@~3.3.5:
   version "3.3.6"
   resolved "https://registry.yarnpkg.com/underscore.string/-/underscore.string-3.3.6.tgz#ad8cf23d7423cb3b53b898476117588f4e2f9159"
   integrity sha512-VoC83HWXmCrF6rgkyxS9GHv8W9Q5nhMKho+OadDJGzL2oDYbYEppBaCMH6pFlwLeqj2QS+hhkw2kpXkSdD1JxQ==
   dependencies:
     sprintf-js "^1.1.1"
     util-deprecate "^1.0.2"
+
+underscore@^1.9.1:
+  version "1.13.6"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.13.6.tgz#04786a1f589dc6c09f761fc5f45b89e935136441"
+  integrity sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A==
 
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.0"
