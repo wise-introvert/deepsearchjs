@@ -12,4 +12,5 @@ jobs:
       - name: "✏️ Generate release changelog"
         uses: heinrichreimer/github-changelog-generator-action@v2.3
         with:
+          output: "../../CHANGELOG.md"
           token: ${{ secrets.GITHUB_TOKEN }} 
