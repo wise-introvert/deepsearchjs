@@ -3,6 +3,7 @@
   "exclude": [
     "spec/**/*.spec.ts",
     "__tests__/**/*.spec.ts",
-    "src/testing.ts"
+    "src/testing.ts",
+    "src/benchmark.*"
   ]
 }
