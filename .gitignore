@@ -132,3 +132,4 @@ dist
 .pnp.*
 
 src/benchmark.json
+chan.old.md
