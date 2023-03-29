@@ -14,3 +14,4 @@ jobs:
       with:
         github-token: ${{ secrets.github_token }}
         git-message: 'chore(release): {version}'
+        skip-git-pull: "true"
