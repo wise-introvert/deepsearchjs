@@ -40,7 +40,7 @@ module.exports = function (grunt) {
         metadata: "",
         regExp: false,
       },
-    },
+    }
   });
 
   grunt.loadNpmTasks("grunt-ts");
@@ -51,6 +51,7 @@ module.exports = function (grunt) {
   grunt.registerTask("release", "bump:patch");
   grunt.registerTask("release:minor", "bump:minor");
   grunt.registerTask("release:major", "bump:major");
+  grunt.registerTask("chan", "conventionalChangelog");
   // Default tasks.
   grunt.registerTask("default", ["ts:build", "uglify"]);
 };
