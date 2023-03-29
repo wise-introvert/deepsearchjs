@@ -181,10 +181,9 @@ suite.on("complete", () => {
     encoding: "utf-8",
   });
 
-  console.log(`
-    - **Fastest method** ( for the current release ): **${suite
-      .filter("fastest")
-      .map("name")}** :sparkles::tada:!!
+  console.log(`- **Fastest method** ( for the current release ): **${suite
+    .filter("fastest")
+    .map("name")}** :sparkles::tada:!!
 <details> <summary>JSON results</summary> <pre>${encoded}</pre> </details>
   `);
 });
