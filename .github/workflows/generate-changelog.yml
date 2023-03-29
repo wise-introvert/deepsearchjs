@@ -6,24 +6,14 @@ on:
       - created
 
 jobs:
-  checkout:
-    name: checkout
+  changelog:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-  setup:
-    name: setup
-    runs-on: ubuntu-latest
-    needs: checkout
-    steps:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-  changelog:
-    runs-on: ubuntu-latest
-    needs: setup
-    steps:
       - uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.github_token }}
