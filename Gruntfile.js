@@ -48,9 +48,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-bump");
   grunt.loadNpmTasks("grunt-git");
 
-  grunt.registerTask('release', 'bump:patch');
-  grunt.registerTask('release:minor', 'bump:minor');
-  grunt.registerTask('release:major', 'bump:major');
+  grunt.registerTask("release", "bump:patch");
+  grunt.registerTask("release:minor", "bump:minor");
+  grunt.registerTask("release:major", "bump:major");
   // Default tasks.
-  grunt.registerTask("default", ["release", "ts:build", "uglify"]);
+  grunt.registerTask("default", ["ts:build", "uglify"]);
 };
