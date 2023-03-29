@@ -8,29 +8,7 @@ on:
     types: [created]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: yarn
-      - run: yarn jest
-
-  build:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: yarn
-      - run: yarn build
-
   publish-npm:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -39,6 +17,8 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: yarn
-      - run: npm publish --force
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      - run: yarn test
+      - run: yarn build
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{secrets.npm_token}}
