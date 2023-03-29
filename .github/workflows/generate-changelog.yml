@@ -9,13 +9,15 @@ jobs:
   changelog:
     runs-on: ubuntu-latest
     steps:
-      - name: Conventional Changelog Action
+      - name: checkout
         uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: setup_node
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - uses: TriPSs/conventional-changelog-action@v3
+      - name: changelog
+        uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.github_token }}
           git-message: 'chore(release): {version}'
