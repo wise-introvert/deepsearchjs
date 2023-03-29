@@ -6,22 +6,29 @@ on:
       - created
 
 jobs:
-  changelog:
+  checkout:
+    name: checkout
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: setup_node
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+  setup:
+    name: setup
+    runs-on: ubuntu-latest
+    needs: checkout
+    steps:
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - name: changelog
-        uses: TriPSs/conventional-changelog-action@v3
+  changelog:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.github_token }}
           git-message: 'chore(release): {version}'
           skip-git-pull: true
           skip-tag: true
           skip-commit: true
-          git-url: "https://github.com/USERNAME/REPO_NAME"
+          git-url: "https://github.com"
