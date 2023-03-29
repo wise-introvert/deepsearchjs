@@ -182,9 +182,9 @@ suite.on("complete", () => {
   });
 
   console.log(`
-    \t- Fastest method ( for the current release ): ${suite
+    - **Fastest method** ( for the current release ): **${suite
       .filter("fastest")
-      .map("name")} :sparkles::tada:!!
+      .map("name")}** :sparkles::tada:!!
 <details> <summary>JSON results</summary> <pre>${encoded}</pre> </details>
   `);
 });
