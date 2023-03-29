@@ -1,6 +1,6 @@
 {
   "name": "deepsearchjs",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "license": "mit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -62,7 +62,7 @@
     "watch": "nodemon",
     "benchmark": "sed -i '/Benchmark/,$d' README.md && ts-node src/benchmark.ts >> README.md",
     "test:watch": "jest --watch",
-    "build": "yarn rimraf dist && yarn benchmark && tsc -p tsconfig-build.json",
+    "build": "yarn rimraf dist && yarn benchmark && grunt",
     "dev": "nodemon --config nodemon.dev.json"
   },
   "jest": {
