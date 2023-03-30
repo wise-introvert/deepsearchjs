@@ -1,0 +1,7 @@
+on: workflow_dispatch
+
+jobs:
+  changelog:
+    runs-on: ubunut-latest
+    steps:
+      - uses: heinrichreimer/action-github-changelog-generator@v2.3
