@@ -12,21 +12,20 @@ jobs:
         # see: https://github.com/heinrichreimer/action-github-changelog-generator
         repo: wise-introvert/deepsearchjs
         output: CHANGELOG.md
-        addSections: '{"build":{"prefix":"**Build:**","labels":["build"]},"docs":{"prefix":"**Documentation:**","labels":["documentation"]},"packaging":{"prefix":"**Packaging:**","labels":["packaging"]}}'
         issues: true
         pullRequests: true
         issuesWoLabels: false
         unreleased: true
         compareLink: true
         includeLabels: bug,enhancement,documentation,build,packaging,deprecated
-        excludeLabels: stale,wontfix
         maxIssues: 150
         releaseBranch: release
         verbose: false
         author: true
     - name: commit
+      needs: changelog
       run: |
-        echo "${{ steps.changelog.outputs.changelog }}" > CHANGELOG.md
+        echo "${{needs.changelog.outputs.changelog}}" > CHANGELOG.md
         git add CHANGELOG.md
         git commit -m "docs: update changelog"
         git push origin "$BRANCH"
