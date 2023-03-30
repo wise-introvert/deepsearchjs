@@ -22,11 +22,14 @@ jobs:
         releaseBranch: release
         verbose: false
         author: true
-    - name: commit
-      needs: changelog
-      run: |
-        echo "${{needs.changelog.outputs.changelog}}" > CHANGELOG.md
-        git add CHANGELOG.md
-        git commit -m "docs: update changelog"
-        git push origin "$BRANCH"
+  commit:
+    runs-on: ubunut-latest
+    needs: generate_changelog_file
+    steps:
+      - name: commit
+        run: |
+          echo "${{needs.generate_changelog_file.outputs.changelog}}" > CHANGELOG.md
+          git add CHANGELOG.md
+          git commit -m "docs: update changelog"
+          git push origin "$BRANCH"
         
