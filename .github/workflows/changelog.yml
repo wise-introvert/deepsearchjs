@@ -5,6 +5,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Generate changelog
       uses: heinrichreimer/action-github-changelog-generator@v2.1.1
+      with:
+        # see: https://github.com/heinrichreimer/action-github-changelog-generator
+        repo: wise-introvert/deepsearchjs
+        base: CHANGELOG.md
+        addSections: '{"build":{"prefix":"**Build:**","labels":["build"]},"docs":{"prefix":"**Documentation:**","labels":["documentation"]},"packaging":{"prefix":"**Packaging:**","labels":["packaging"]}}'
+        issues: true
+        pullRequests: true
+        issuesWoLabels: false
+        unreleased: true
+        compareLink: true
+        includeLabels: bug,enhancement,documentation,build,packaging,deprecated
+        excludeLabels: stale,wontfix
+        maxIssues: 150
+        releaseBranch: release
+        verbose: false
+        author: true
