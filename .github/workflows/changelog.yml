@@ -1,7 +1,25 @@
 on: workflow_dispatch
 
 jobs:
-  changelog:
-    runs-on: ubunut-latest
+  generate_changelog_file:
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: heinrichreimer/action-github-changelog-generator@v2.3
+    - uses: actions/checkout@v2
+
+    - name: Setup ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+        
+    - name: Install github_changelog_generator
+      run: gem install github_changelog_generator
+      
+    - name: Gen changelog
+      run: github_changelog_generator -t ${{ secrets.GITHUB_TOKEN }} -u casbin -p casbin-rs
+      
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update Changelog
+        file_pattern: CHANGELOG.md
