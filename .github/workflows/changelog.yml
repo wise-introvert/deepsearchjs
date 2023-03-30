@@ -11,7 +11,7 @@ jobs:
       with:
         # see: https://github.com/heinrichreimer/action-github-changelog-generator
         repo: wise-introvert/deepsearchjs
-        base: CHANGELOG.md
+        output: CHANGELOG.md
         addSections: '{"build":{"prefix":"**Build:**","labels":["build"]},"docs":{"prefix":"**Documentation:**","labels":["documentation"]},"packaging":{"prefix":"**Packaging:**","labels":["packaging"]}}'
         issues: true
         pullRequests: true
