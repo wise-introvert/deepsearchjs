@@ -6,7 +6,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Generate changelog
+    - name: changelog
       uses: heinrichreimer/action-github-changelog-generator@v2.1.1
       with:
         # see: https://github.com/heinrichreimer/action-github-changelog-generator
@@ -24,3 +24,10 @@ jobs:
         releaseBranch: release
         verbose: false
         author: true
+    - name: commit
+      run: |
+        | echo "${{ steps.changelog.outputs.changelog }}" > CHANGELOG.md
+        | git add CHANGELOG.md
+        | git commit -m "docs: update changelog"
+        | git push origin "$BRANCH"
+        
