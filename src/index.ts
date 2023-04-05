@@ -14,8 +14,7 @@
  * returns an object containing the search results. getkeys is a helper function
  */
 
-import get from "lodash.get";
-import isEmpty from "lodash.isemtpy";
+const get = require('lodash.get')
 
 /**
  * Determines if a value is a function
