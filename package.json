@@ -11,8 +11,7 @@
   ],
   "repository": "git@github.com:wise-introvert/deepsearchjs.git",
   "dependencies": {
-    "lodash.get": "^4.4.2",
-    "lodash.isempty": "^4.4.0"
+    "lodash.get": "^4.4.2"
   },
   "keywords": [
     "typescript",
@@ -43,9 +42,7 @@
     "@babel/preset-typescript": "^7.18.6",
     "@jest/globals": "^29.3.1",
     "@types/benchmark": "^2.1.2",
-    "@types/lodash": "^4.14.191",
     "@types/lodash.get": "^4.4.7",
-    "@types/lodash.isempty": "^4.4.7",
     "@types/node": "^18.11.18",
     "babel-jest": "^29.3.1",
     "benchmark": "^2.1.4",
@@ -68,7 +65,7 @@
     "watch": "nodemon",
     "benchmark": "sed -i '/Benchmark/,$d' README.md && ts-node src/benchmark.ts >> README.md",
     "test:watch": "jest --watch",
-    "build": "yarn rimraf dist && yarn benchmark && grunt",
+    "build": "yarn test && yarn rimraf dist && yarn benchmark && grunt",
     "dev": "nodemon --config nodemon.dev.json",
     "chan": "yarn run generate-changelog -t v1.7.3"
   },
