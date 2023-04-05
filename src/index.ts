@@ -14,7 +14,8 @@
  * returns an object containing the search results. getkeys is a helper function
  */
 
-import { get, isEmpty } from "lodash";
+import get from "lodash.get";
+import isEmpty from "lodash.isemtpy";
 
 /**
  * Determines if a value is a function
